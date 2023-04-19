@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --color1: red;
+  --color2: blue;
+  --color3: green;
+  --color4: yellow;
+  --color5: purple;
+  --color6: orange;
+}
+
+/* fadein2 */
+.box {
+  width: 100%;  /* 横幅いっぱい */
+  height: 300px;  /* 高さを300pxに指定 */
+  background: #aaa;  /* 背景色を灰色にする */
+  margin: 100px 0;
+  transform: translateY(-50);
+  opacity: 0;  /* 初期値は透明にしておく */
+  transition: .5s;  /* 動くスピードを0.5秒に指定 */
+  position: relative;  /* 相対位置の設定 */
+  top: 50px;  /* 事前に下に50pxずらしておく */
+}
+
+.box:nth-of-type(6n) {
+  background: var(--color1);
+}
+
+.box:nth-of-type(6n+1) {
+  background: var(--color2);
+}
+
+.box:nth-of-type(6n+2) {
+  background: var(--color3);
+}
+
+.box:nth-of-type(6n+3) {
+  background: var(--color4);
+}
+
+.box:nth-of-type(6n+4) {
+  background: var(--color5);
+}
+
+.box:nth-of-type(6n+5) {
+  background: var(--color6);
+}
+
+.active {
+  opacity: 1;
+  /* 透明度を元に戻す */
+  top: 0;
+  /* ずらしていた位置を戻すことで上に上がっているようにみえる */
+
+
+transform: translateY(0);
+}
